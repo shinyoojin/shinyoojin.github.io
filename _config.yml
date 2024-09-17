@@ -1,7 +1,7 @@
 # site settings
 title: Yoo Jin Shin
 subtitle: Data Portfolio
-email: ✉️
+# email: ✉️
 description: 🚧 Work in Progress 🚧 <br /> Please visit at a later time.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: # the base hostname & protocol for your site
@@ -10,8 +10,8 @@ street_address: New York Metropolitan Area
 city: 
 state: 
 zip_code: 
-country: United States of America
-phone:
+country: 🇺🇸
+# phone:
 
 # homepage tiles
 tiles-source: pages # accepts "posts" or "pages"
@@ -30,6 +30,7 @@ socials:
   Twitter: 
   Facebook:
   Slack:
+  Email: mailto:theyoojin@gmail.com
 
 # build settings
 markdown: kramdown
