@@ -12,22 +12,48 @@
         #protected-content {
             display: none;
         }
+	#password-form {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .hidden {
+            display: none;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }    
     </style>
     <script>
         function checkPassword() {
-            const password = prompt('Enter the password:');
-            if (password === 'passwordhehe') {
+            const passwordInput = document.getElementById('password-input').value;
+            const errorText = document.getElementById('error-text');
+
+            if (passwordInput === 'passwordhehe') {
+                document.getElementById('password-form').classList.add('hidden');
                 document.getElementById('protected-content').style.display = 'block';
             } else {
-                alert('Incorrect password!');
-                window.location.href = 'https://www.shinyoojin.com/404'; // Redirect to another page if password is incorrect
+                errorText.textContent = 'Incorrect password!';
             }
         }
     </script>
 </head>
 
-<body onload="checkPassword()">
+<body>
     {% include header.html %}
+	
+    <!-- Password Form -->
+    <div id="password-form">
+        <h2>Enter Password to View Content</h2>
+        <input type="password" id="password-input" placeholder="Enter password">
+        <button onclick="checkPassword()">Submit</button>
+        <p id="error-text" class="error"></p>
+    </div>
+	
+    <!-- Protected Content -->
+    <div id="protected-content">	
+		
     <!-- Banner -->
     <section id="banner" class="major">
         <div class="inner">
