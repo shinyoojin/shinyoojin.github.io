@@ -9,8 +9,23 @@
 <head>
     {% include head.html %}
     <style>
-        #protected-content {
-            display: none;
+	body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #password-form {
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #password-input {
+            width: 300px;
+            padding: 10px;
+        #submit-button {
+            padding: 10px 20px;
         }
 	#password-form {
             display: block;
@@ -24,6 +39,9 @@
             color: red;
             margin-top: 10px;
         }    
+        #protected-content {
+            display: none;
+        }
     </style>
     <script>
         function checkPassword() {
@@ -45,7 +63,7 @@
 	
     <!-- Password Form -->
     <div id="password-form">
-        <h2>Enter Password to View Content</h2>
+        <h2>🔒 Password?</h2>
         <input type="password" id="password-input" placeholder="Enter password">
         <button onclick="checkPassword()">Submit</button>
         <p id="error-text" class="error"></p>
