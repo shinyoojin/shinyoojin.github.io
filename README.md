@@ -23,7 +23,7 @@ Simply fork this repository and start editing the `_config.yml` file!
 
 # Credits
 
-Original README from HTML5 UP:
+Original README from HTML5 UP: 
 
 ```
 Forty by HTML5 UP
