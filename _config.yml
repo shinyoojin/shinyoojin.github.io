@@ -1,16 +1,16 @@
 # site settings
 title: Yoo Jin Shin
-subtitle: Data Portfolio
+subtitle: Portfolio
 email:
 description: 🚧 Work in Progress 🚧 <br /> Please visit at a later time.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.shinyoojin.com" # the base hostname & protocol for your site
 author:
-street_address: New York Metropolitan Area
+street_address: New York Metropolitan Area 🇺🇸
 city:
 state:
 zip_code:
-country: 🇺🇸
+country:
 phone:
 
 # homepage tiles
