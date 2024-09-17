@@ -7,5 +7,3 @@ image: null
 author: null
 show_tile: false
 ---
-
-Currently exploring the world of data science & analytics. Stay tuned for projects!
