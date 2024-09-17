@@ -10,5 +10,3 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: helaili/jekyll-action@2.0.5
-        build_only: true
