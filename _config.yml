@@ -6,7 +6,7 @@ description: 🚧 Work in Progress 🚧 <br /> Please visit at a later time.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.shinyoojin.com" # the base hostname & protocol for your site
 author:
-street_address: New York Metropolitan Area 🇺🇸
+street_address: 🇺🇸
 city:
 state:
 zip_code:
@@ -26,7 +26,7 @@ socials:
   GitLab:
   Google-Plus:
   Instagram:
-  LinkedIn: https://www.linkedin.com/in/yoojinshin
+  LinkedIn:
   Twitter:
   Facebook:
   Slack:
