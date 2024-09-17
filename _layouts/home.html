@@ -6,12 +6,28 @@
 -->
 <html>
 
-{% include head.html %}
+<head>
+    {% include head.html %}
+    <style>
+        #protected-content {
+            display: none;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            const password = prompt('Enter the password:');
+            if (password === 'passwordhehe') {
+                document.getElementById('protected-content').style.display = 'block';
+            } else {
+                alert('Incorrect password!');
+                window.location.href = 'https://www.shinyoojin.com/404'; // Redirect to another page if password is incorrect
+            }
+        }
+    </script>
+</head>
 
-<body>
-
+<body onload="checkPassword()">
     {% include header.html %}
-
     <!-- Banner -->
     <section id="banner" class="major">
         <div class="inner">
