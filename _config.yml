@@ -4,7 +4,7 @@ subtitle: Data Portfolio
 email: 
 description: 🚧 Work in Progress 🚧 <br /> Please visit at a later time.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
+url: "https://www.shinyoojin.com" # the base hostname & protocol for your site
 author:
 street_address: New York Metropolitan Area
 city: 
