@@ -7,6 +7,8 @@
 <html>
 
 <head>
+    {% include header.html %}
+	
     <style>
         #password-form {
             display: block;
@@ -53,6 +55,8 @@
 
 <body>
 	
+    {% include header.html %}
+	
     <!-- Password Form -->
     <div id="password-form">
         <h2>🔒 Password?</h2>
@@ -64,7 +68,6 @@
 	
     <!-- Protected Content (only visible after password is correct) -->
     <div id="protected-content">	
-    {% include header.html %}
 		
     <!-- Banner -->
     <section id="banner" class="major">
