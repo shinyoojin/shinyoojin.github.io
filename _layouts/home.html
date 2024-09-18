@@ -9,21 +9,20 @@
 <head>
     {% include head.html %}
     <style>
-	body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
         #password-form {
             display: block;
             text-align: center;
             margin-top: 50px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         #password-input {
             width: 300px;
             padding: 10px;
+            margin-bottom: 20px;
+	}
         #submit-button {
             padding: 10px 20px;
         }
@@ -31,9 +30,6 @@
             display: block;
             text-align: center;
             margin-top: 50px;
-        }
-        .hidden {
-            display: none;
         }
         .error {
             color: red;
@@ -43,19 +39,21 @@
             display: none;
         }
     </style>
+	
     <script>
         function checkPassword() {
             const passwordInput = document.getElementById('password-input').value;
             const errorText = document.getElementById('error-text');
 
             if (passwordInput === 'passwordhehe') {
-                document.getElementById('password-form').classList.add('hidden');
+                document.getElementById('password-form').style.display = 'none';
                 document.getElementById('protected-content').style.display = 'block';
             } else {
-                errorText.textContent = 'Incorrect password!';
+                errorText.textContent = 'Incorrect password';
             }
         }
     </script>
+
 </head>
 
 <body>
@@ -65,11 +63,12 @@
     <div id="password-form">
         <h2>🔒 Password?</h2>
         <input type="password" id="password-input" placeholder="Enter password">
-        <button onclick="checkPassword()">Submit</button>
+        <br>
+        <button id="submit-button" onclick="checkPassword()">Submit</button>
         <p id="error-text" class="error"></p>
     </div>
 	
-    <!-- Protected Content -->
+    <!-- Protected Content (only visible after password is correct) -->
     <div id="protected-content">	
 		
     <!-- Banner -->
