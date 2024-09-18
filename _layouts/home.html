@@ -7,13 +7,13 @@
 <html>
 
 <head>
-    {% include header.html %}
-	
+    {% include head.html %}
     <style>
         #password-form {
             display: block;
             text-align: center;
             margin-top: 50px;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -23,20 +23,17 @@
             padding: 10px;
             margin-bottom: 20px;
 	}
-	#password-form {
-            display: block;
-            text-align: center;
-            margin-top: 50px;
+        #submit-button {
+            padding: 10px 20px;
         }
         .error {
             color: red;
             margin-top: 10px;
-        }    
-        #protected-content {
+	#protected-content {
             display: none;
         }
     </style>
-	
+
     <script>
         function checkPassword() {
             const passwordInput = document.getElementById('password-input').value;
@@ -54,10 +51,8 @@
 </head>
 
 <body>
-	
     {% include header.html %}
 	
-    <!-- Password Form -->
     <div id="password-form">
         <h2>🔒 Password?</h2>
         <input type="password" id="password-input" placeholder="Enter password">
@@ -65,10 +60,10 @@
         <button id="submit-button" onclick="checkPassword()">Submit</button>
         <p id="error-text" class="error"></p>
     </div>
-	
+
     <!-- Protected Content (only visible after password is correct) -->
     <div id="protected-content">	
-		
+
     <!-- Banner -->
     <section id="banner" class="major">
         <div class="inner">
