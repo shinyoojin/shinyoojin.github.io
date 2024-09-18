@@ -3,6 +3,11 @@
 {% elsif 'pages' == site.tiles-source %}
     {% assign tiles = site.html_pages | where_exp: "item", "item.show_tile != false" %}
 {% endif %}
+
+{% assign tile_count = tiles | size %}
+{% assign min_tiles = 3 %}
+{% assign display_count = tile_count | default: min_tiles %}
+
 <section id="one" class="tiles">
   {% for tile in tiles limit:site.tiles-count %}
   <article>
