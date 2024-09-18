@@ -7,13 +7,11 @@
 <html>
 
 <head>
-    {% include head.html %}
     <style>
         #password-form {
             display: block;
             text-align: center;
             margin-top: 50px;
-            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -23,9 +21,6 @@
             padding: 10px;
             margin-bottom: 20px;
 	}
-        #submit-button {
-            padding: 10px 20px;
-        }
 	#password-form {
             display: block;
             text-align: center;
@@ -57,7 +52,6 @@
 </head>
 
 <body>
-    {% include header.html %}
 	
     <!-- Password Form -->
     <div id="password-form">
@@ -70,6 +64,7 @@
 	
     <!-- Protected Content (only visible after password is correct) -->
     <div id="protected-content">	
+    {% include header.html %}
 		
     <!-- Banner -->
     <section id="banner" class="major">
