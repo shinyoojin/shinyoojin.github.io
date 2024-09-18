@@ -8,6 +8,8 @@
 
 <head>
     {% include head.html %}
+
+    <!-- Styles and script for password protection -->
     <style>
         #password-form {
             display: block;
@@ -18,20 +20,37 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+	    
         #password-input {
             width: 300px;
             padding: 10px;
             margin-bottom: 20px;
-	}
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+	    
         #submit-button {
             padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
+	    
+        #submit-button:hover {
+            background-color: #0056b3;
+        }
+	    
         .error {
             color: red;
             margin-top: 10px;
+	
+	/* Hide all content by default */
 	#protected-content {
             display: none;
         }
+		
     </style>
 
     <script>
@@ -51,8 +70,8 @@
 </head>
 
 <body>
-    {% include header.html %}
-	
+
+    <!-- Password Form -->
     <div id="password-form">
         <h2>🔒 Password?</h2>
         <input type="password" id="password-input" placeholder="Enter password">
@@ -64,6 +83,9 @@
     <!-- Protected Content (only visible after password is correct) -->
     <div id="protected-content">	
 
+    <!-- Include head and header (hidden until password is correct) -->
+    {% include header.html %}
+	    
     <!-- Banner -->
     <section id="banner" class="major">
         <div class="inner">
