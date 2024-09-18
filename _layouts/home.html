@@ -43,12 +43,19 @@
 		
     </style>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
     <script>
+        const hashedPassword = '0c32609159b6790289413b085ef260a461aa428998a0ecfa0e923f0da65b5c5b';  // Hashed version
+
         function checkPassword() {
             const passwordInput = document.getElementById('password-input').value;
             const errorText = document.getElementById('error-text');
 
-            if (passwordInput === 'passwordhehe') {
+            // Hash the input password using SHA-256
+            const hashedInput = sha256(passwordInput);
+
+            // Compare hashed input with the stored hashed password
+            if (hashedInput === hashedPassword) {
                 document.getElementById('password-form').style.display = 'none';
                 document.getElementById('protected-content').style.display = 'block';
             } else {
